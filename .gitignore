@@ -1,48 +1,161 @@
+############################
 # OS / Editor
+############################
 .DS_Store
 Thumbs.db
 *~
 *.swp
+*.swo
 .idea/
 .vscode/
+*.code-workspace
 
-# Python
+############################
+# Python / Build / Venv
+############################
 __pycache__/
 *.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Environments
 venv/
 .venv/
 env/
+ENV/
+.python-version
 
-# Build
+# Packaging
 build/
 dist/
 *.egg-info/
+.eggs/
+pip-wheel-metadata/
 
-# Data
+############################
+# Notebooks / Research
+############################
+.ipynb_checkpoints/
+# If you want to keep notebooks only in /notebooks:
+# *.ipynb
+# !notebooks/*.ipynb
+
+############################
+# Data (trading/research)
+############################
+# General data dirs (ignore by default)
 data/
-raw_data/
+datasets/
+raw/
+processed/
+downloads/
+
+# Common large/binary data formats
 *.csv
+*.tsv
 *.parquet
 *.arrow
+*.feather
+*.hdf5
+*.h5
+*.pickle
+*.pkl
+*.npz
+*.npy
 
-# Secrets
-.env
-.env.*
-*.key
-*.pem
-secrets/
+# Market data dumps
+*.jsonl
+*.ndjson
+*.msgpack
+*.zst
 
-# Logs
+# Compressed archives
+*.zip
+*.gz
+*.bz2
+*.xz
+*.7z
+*.tar
+*.tgz
+
+# Allow small sample data to be committed:
+!data/sample/
+!data/sample/**
+
+############################
+# Backtests / Results / Artifacts
+############################
+results/
+output/
+outputs/
+reports/
+figures/
+charts/
+plots/
+backtests/
+runs/
+mlruns/          # MLflow
+wandb/           # Weights & Biases
+tensorboard/
+checkpoints/
+models/
+*.pt
+*.pth
+*.onnx
+*.joblib
+
+############################
+# Logs / Runtime / Temp
+############################
 *.log
 logs/
 tmp/
+temp/
 .cache/
+*.pid
 
-# Jupyter
-.ipynb_checkpoints/
+############################
+# Secrets / Credentials (CRITICAL)
+############################
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.keystore
+secrets/
+credentials/
+config/secrets.*
+**/*token*
+**/*apikey*
+**/*api_key*
+**/*secret*
 
-# Proxmox / Infra
+############################
+# Docker / Compose overrides
+############################
+docker-compose.override.yml
+
+############################
+# Terraform / IaC (if any)
+############################
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+############################
+# Proxmox / VM images (if any)
+############################
 *.qcow2
 *.img
 *.iso
+*.vmdk
 backups/
