@@ -1,0 +1,6 @@
+# conversione “core” top-of-book
+python parquet_to_memmap.py eurusd_l2.parquet --out eurusd_mmap
+
+# conversione con più colonne (es. depth 10)
+python parquet_to_memmap.py eurusd_l2.parquet --out eurusd_mmap_d10 \
+  --cols "ts_ns,mid,spread,tick_vol,bid_p1,bid_s1,ask_p1,ask_s1,bid_p2,bid_s2,ask_p2,ask_s2"
