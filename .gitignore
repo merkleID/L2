@@ -1,0 +1,48 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Data
+data/
+raw_data/
+*.csv
+*.parquet
+*.arrow
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# Logs
+*.log
+logs/
+tmp/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Proxmox / Infra
+*.qcow2
+*.img
+*.iso
+backups/
